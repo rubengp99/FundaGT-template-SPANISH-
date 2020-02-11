@@ -1,0 +1,385 @@
+*{
+	font-family: 'Nunito Sans',sans-serif;
+	box-sizing: border-box;
+}
+
+*,*::after,*::before{
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #D0D5DF;
+}
+
+::-webkit-scrollbar-thumb {
+  
+  background: #4B6292;
+}
+
+html{
+	
+	scroll-behavior: smooth;
+	overflow-x:hidden; 
+	scrollbar-width:thin;
+	scrollbar-color:#394a6d;
+}
+
+body{
+	margin: 0;
+	background: #eeeeee;
+}
+
+
+ul{
+	list-style-type: none;
+}
+/* ESTO ES FLEXBOX, LA BASE ESTRUCTURAL DEL SITIO */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  flex: 50%;
+  max-width: 50%;
+  justify-content: center;
+}
+
+.apadrinado{
+	flex: 0 0 20%;
+	max-width: 20%;
+	align-self: center;
+	background: #F5F5F5;
+	margin: 15px;
+	box-shadow: 4px 4px 4px rgba(0,0,0,.5);
+	text-align: center;
+}
+
+
+/**/
+.navbar{
+	height: 7vh;
+	min-height: 50px;
+	background: #233567;
+}
+
+.sticky{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.sticky + .presentacion {
+  margin-top: 70px;
+}
+
+.navbar ul{
+	width: 100%;
+	position: relative;
+	height: 100%;
+	display: block;
+	margin: 0;
+	text-align: right;
+}
+
+.logo{
+	position: absolute;
+	height: 7vh;
+	min-height: 50px;
+	width: 7vh;
+	min-width: 50px;
+	margin-left: 10px;
+}
+
+.navbar  ul  li{
+	height: 100%;
+	position: relative;
+	display: inline-block;
+	padding:0 18px;
+}
+
+.navbar ul li:hover{
+	background: #f5f5f5;
+	transition: all .4s ease-in-out;
+}
+
+.navbar ul li:hover a{
+	color: black;
+	transition: all .4s ease-in-out;
+}
+
+
+
+.navbar  ul  li a{
+	color: white;
+	text-decoration: none;;
+	position: relative;
+	top: 30%;
+	transform: translateY(-30%);
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.hero-layer{
+	width: 100vw;
+	height: 93vh;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: linear-gradient(rgba(1, 2, 78  ,.4),rgba(0,0,0,.4)),url(imagenes/FundacionGT.jpeg);
+	background-repeat: no-repeat;
+	background-position: center 70%;
+}
+
+.hero-layer .hero-content{
+	text-align: left;
+	width: 80%;
+	height: 65px;
+	/*background: rgba(80, 123, 222, .7);*/
+	position: absolute;
+	display: block;
+	left: 10%;
+	bottom: 20%;
+	border-radius: 5px;
+}
+
+.hero-layer .hero-content .hero-title{
+	font-size: 55px;
+	text-align: left;
+	font-weight: 600;
+	color: #F5F5F5;
+	margin: auto;
+	letter-spacing: 0.33px;
+	line-height: 60px
+}
+
+.hero-layer .hero-content .hero-title span{
+	font-size: 40px;
+}
+
+.presentacion{
+	display: block;
+	align-items: baseline;
+	width: 100vw;
+	padding: 25px 0 50px 0;
+}
+
+.titulo{
+	font-size: 55px;
+    font-weight: 600;
+    letter-spacing: 0.33px;
+	width: 100%;
+	text-align: center;
+	margin: 25px auto 0 auto;
+	color: #0d0d0d;
+	
+}
+
+.presentacion .foto {
+	display: block;
+	position: relative;
+	
+}
+
+.presentacion .foto img{
+	width: 100%;
+	display: block;
+	
+}
+
+.presentacion .texto{
+	position: relative;
+	width: 50vw;
+	display: inline-block;
+	white-space: normal;
+}
+
+.presentacion .texto p{
+	display: block;
+	text-align: justify;
+	margin:auto;
+	width: 85%;
+}
+
+.texto-blanco{
+	color:#F5F5F5;
+}
+
+.mision-vision{
+	background: #0d0d0d;
+	position: relative;
+	display: block;
+}
+
+.mision-vision p strong{
+	font-size: 45px;
+}
+
+.mision-vision p {
+	color:#f5f5f5;
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	padding: 50px;
+	margin: 0;
+	text-align: justify;
+	font-size: 17px;
+}
+
+.apadrinado .foto img{
+	width: 100%;
+	max-height: 250px
+}
+
+.apadrinado .nombre p{
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 15px 10px;
+}
+
+.apadrinado .extra p{
+	font-size: .8em;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 15px 10px;
+}
+
+/* google maps con formulario*/
+
+
+* {
+	margin:0px;
+	padding:0px;
+}
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing: border-box; }
+
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+
+body {
+	background: #ffffff;
+	color: #333;
+	font-weight: normal;
+	font-size: 1em;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+input:focus, textarea:focus, keygen:focus, select:focus {
+	outline: none;
+}
+::-moz-placeholder {
+	color: #666;
+	font-weight: 300;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #666;
+	font-weight: 300;
+}
+
+/* contact from design */
+.container {
+	padding: 20px 30px 70px;
+	white-space: nowrap;
+}
+.sec1title {
+	text-align: center;
+}
+.sec1title h1 {
+	font-size: 40px;
+    margin: 25px;
+    text-transform: uppercase;
+    color: #F5F5F5;
+    font-weight: 400;
+}
+.section2 {
+	position: relative;
+	overflow: hidden;
+}
+
+.section3 {
+	position: relative;
+	overflow: hidden;
+}
+.section3 .contactform {
+    top: 0;
+    z-index: 99;
+    background: #eeeeee;
+    padding: 30px 40px 70px;
+	box-sizing: border-box;
+	height: 610px;
+}
+.section3 .contactform input.form-fields,
+.section3 .contactform button.form-fields,
+.section3 .contactform textarea.form-fields {
+    padding: 0 0 0 40px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    background: #f5f5f5;
+    margin: 20px 0;
+    border: 1px solid #0d0d00;
+    color: #0d0d0d;
+    min-height: 45px;
+    text-shadow: none;
+    position: relative;
+}
+.section3 .contactform textarea.form-fields {
+	padding: 8px 40px;
+	resize: none;
+}
+.section3 .contactform button.form-fields.button {
+	color:white;
+	font-size: 14px;
+	padding: 0;
+	text-transform: uppercase;
+	background: #0d0d0d;
+
+}
+.section3 .contactform button.form-fields.button:hover {
+	background: #233567;
+	color: #fff;
+	cursor: pointer;
+	opacity: 1;
+}
+
+.section3 .contactform button.form-fields.button i {
+	margin-left:10px;
+	color:white;
+}
+
+.section3 .contactform h5 {
+	color: #0d0d0d;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.section3 .contactform label .cntfrmicn {
+	color: #0d0d0d;
+    padding: 14px;
+    position: absolute;
+    z-index: 99;
+}
+
+@media only screen and (max-width: 660px) {
+	.container {
+		padding: 10px 20px 30px;
+	}
+	.contmap {
+		height: 475px !important;
+	}
+	.sec1title h1 {
+		font-size: 28px;
+	}
+	.section2 .contactform { padding: 10px; right: 0; width: 100%; }
+	.section2 .contactform input.form-fields, .section2 .contactform button.form-fields, .section2 .contactform textarea.form-fields {
+		width: 100%;
+	}
+}
